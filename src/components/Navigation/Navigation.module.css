@@ -1,0 +1,24 @@
+.nav {
+  display: flex;
+  align-items: center;
+  /* background-color: skyblue; */
+  border-bottom: 3px solid skyblue;
+  height: 80px;
+  width: 97%;
+  margin: 0 auto;
+}
+
+.link {
+  font-size: 30px;
+  text-decoration: none;
+  color: darkblue;
+}
+
+.link:not(:last-child) {
+  margin-right: 20px;
+}
+
+.activeLink {
+  color: blue;
+  /* text-decoration: underline; */
+}
