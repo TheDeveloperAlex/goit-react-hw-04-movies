@@ -4,10 +4,16 @@
   /* margin: 0 auto; */
   font-size: 30px;
   margin-bottom: 20px;
+  background-color: darkblue;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
 }
 
 .center {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .list {
