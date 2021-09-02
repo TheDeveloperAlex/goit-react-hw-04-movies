@@ -1,6 +1,11 @@
+import s from './NotFound.module.css';
+
 const NotFound = () => {
     return (
-        <h2>404 Page not found</h2>
+        <div className={s.wraper}>
+            <h2 className={s.title}>404 Page not found</h2>
+        </div>
+        
     );
 }
 

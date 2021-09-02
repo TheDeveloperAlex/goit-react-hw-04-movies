@@ -1,0 +1,14 @@
+.title {
+  color: whitesmoke;
+  width: 400px;
+  background-color: rgba(144, 0, 0, 0.95);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.wraper {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,31 @@
+.wraper {
+  color: aliceblue;
+}
+
+.Title {
+  background-color: blueviolet;
+  border-radius: 20px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.noResultTitle {
+  font-size: 25px;
+  /* width: 400px;
+  margin: 0 auto; */
+}
+
+.div {
+  margin-bottom: 20px;
+}
+
+.name {
+  background-color: rgba(242, 0, 230, 0.73);
+  width: 500px;
+  padding-left: 10px;
+  border-radius: 10px;
+}

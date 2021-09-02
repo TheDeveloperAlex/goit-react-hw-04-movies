@@ -1,0 +1,35 @@
+.wraper {
+  color: aliceblue;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-top: -20px;
+  width: 920px;
+  margin: 0 auto;
+}
+
+.listItem {
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 210px;
+}
+
+.photo {
+  /* width: 200 */
+  width: 210px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.Title {
+  background-color: rgba(2, 0, 230, 0.89);
+  border-radius: 20px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}

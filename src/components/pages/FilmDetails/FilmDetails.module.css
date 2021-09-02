@@ -1,0 +1,79 @@
+.section {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  width: 98%;
+  margin-right: auto;
+  margin-left: auto;
+  border-bottom: 1px solid skyblue;
+}
+
+.poster {
+  width: 320px;
+  height: 480px;
+}
+
+.info {
+  width: 640px;
+}
+
+.title {
+  margin-bottom: 20px;
+  background-color: rgba(9, 9, 234, 0.9);
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.score {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.genersDiv {
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  color: whitesmoke;
+  margin-bottom: 20px;
+  font-size: 25px;
+  padding-left: 20px;
+}
+
+.list {
+  display: flex;
+  padding-left: 15px;
+  width: 250px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cast {
+  font-size: 20px;
+  color: aliceblue;
+  /* padding: 15px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  /* text-transform: uppercase; */
+  font-weight: bold;
+
+  border-radius: 15px;
+  background-color: rgba(2, 0, 230, 0.89);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rewies {
+  font-size: 20px;
+  color: aliceblue;
+  background-color: blueviolet;
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: bold;
+}

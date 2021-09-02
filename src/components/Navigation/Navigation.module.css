@@ -6,16 +6,22 @@
   height: 80px;
   width: 97%;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .link {
+  padding: 10px;
   font-size: 30px;
   text-decoration: none;
   color: darkblue;
 }
 
+.link:hover {
+  color: rgba(120, 120, 245, 0.81);
+}
+
 .link:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .activeLink {
