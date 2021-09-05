@@ -1,9 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import s from './Navigation.module.css';
+import { useLocation } from 'react-router-dom';
+
 
 
 const Navigation = () => {
+    const location = useLocation();
     return (
         <header >
             <nav className={s.nav }>

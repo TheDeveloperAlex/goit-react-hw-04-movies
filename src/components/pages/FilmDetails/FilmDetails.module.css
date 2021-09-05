@@ -1,7 +1,7 @@
 .section {
   color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-bottom: 20px;
   margin-bottom: 20px;
   width: 98%;
@@ -55,10 +55,8 @@
 .cast {
   font-size: 20px;
   color: aliceblue;
-  /* padding: 15px; */
   padding-left: 15px;
   padding-right: 15px;
-  /* text-transform: uppercase; */
   font-weight: bold;
 
   border-radius: 15px;
@@ -76,4 +74,15 @@
   padding-left: 15px;
   padding-right: 15px;
   font-weight: bold;
+}
+
+.button {
+  padding: 5px;
+  height: 45px;
+  border-radius: 15px;
+  font-size: 15px;
+  width: 80px;
+  cursor: pointer;
+  background-color: rgba(110, 245, 0, 0.8);
+  color: wheat;
 }

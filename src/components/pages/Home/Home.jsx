@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
-import { Link, useRouteMatch } from 'react-router-dom';
+import { Link, useRouteMatch, useLocation } from 'react-router-dom';
 import { SerchTrends, posterImg } from '../../../Api/Api';
 import s from './Home.module.css';
 
 const Home = () => {
     const [films, setFilms] = useState([]);
-    // const [posters, setPosters] = useState([]);
+    
+    const location = useLocation();
     const { url } = useRouteMatch();
-    // console.log(url);
+    
 
     useEffect(() => {
         if (SerchTrends()) {
@@ -17,17 +18,9 @@ const Home = () => {
 
 
 
-    console.log(films);
+    
 
-    // films.map(film => (
-    //     // setPosters(prev => ([...prev, ]))
-    //     console.log(film.poster_path)
-    // ))
-
-    // films.map(film => (setPosters([ film.poster_path])));
-        
-
-    // console.log(posters);
+    
 
     return (
         <div>
@@ -40,7 +33,10 @@ const Home = () => {
                     {films.map(film => (
                         <li key={film.id} className={s.listItem}>
                             
-                                <Link className={s.Link} to={`${url}movies/${film.id}`}>
+                            <Link className={s.Link} to={{
+                                pathname: `${url}movies/${film.id}`,
+                                state: {from: location}
+                            }}>
                                     <img src={'https://image.tmdb.org/t/p/w500' + film.poster_path} alt="" className={s.img} />
                                     <p className={s.filmTitle}>{film.title || film.name}</p> 
                                         

@@ -1,7 +1,7 @@
 import { useState,useEffect } from 'react';
-import { useParams} from 'react-router-dom'
+import { useParams, useLocation, useHistory } from 'react-router-dom';
 import { AllInfo } from '../../../Api/Api';
-import { NavLink, useRouteMatch, Route } from 'react-router-dom';
+import { NavLink, useRouteMatch, Route, Switch } from 'react-router-dom';
 import Cast from './Cast/Cast';
 import Rewies from './Rewies/Rewies';
 import s from './FilmDetails.module.css';
@@ -9,20 +9,39 @@ import s from './FilmDetails.module.css';
 const FilmDetails = () => {
     const { filmId } = useParams();
     const [film, setFilm] = useState(null);
+    const [from, setFrom] = useState({});
     const { url } = useRouteMatch();
+    const location = useLocation();
+    const history = useHistory();
 
-    // console.log(url);
+
+    
+    const onClickBack = () => {
+        if (location.pathname === `/movies/${filmId}/cast` || location.pathname === `/movies/${filmId}/rewies`) {
+            history.push(from);
+        }
+        else {
+            history.push(location.state.from);
+        }
+        
+    }
+
+    useEffect(() => {
+        setFrom(location.state.from);
+    }, [])
+    
 
     useEffect(() => {
         AllInfo(filmId).then(res => (setFilm(res)));
        
     }, [filmId])
 
-    // console.log(film);
+    
 
     return (
         <>
             <div className={s.section}>
+                
                 {film &&
                     <>
                         
@@ -48,26 +67,35 @@ const FilmDetails = () => {
                         </div>
                     </>
                 }
+                <button type="button" className={s.button} onClick={onClickBack}>Go back</button>
             </div>
 
             <div>
                 <p className={s.paragraph}>Idditional information</p>
                 <ul className={s.list}>
                     <li>
-                        <NavLink to={`${url}/cast`} className={s.cast}>Cast</NavLink>
+                        <NavLink to={{
+                            pathname: `${url}/cast`,
+                            state: {from: location }
+                        }} className={s.cast}>Cast</NavLink>
                     </li>
                     <li>
-                        <NavLink to={`${url}/rewies`} className={s.rewies}>Rewies</NavLink>
+                        <NavLink to={{
+                            pathname: `${url}/rewies`,
+                            state: {from: location}
+                        }} className={s.rewies}>Rewies</NavLink>
                     </li>
                 </ul>
             </div>
-
-            <Route path="/movies/:filmId/cast">
-                <Cast id={filmId}/>
-            </Route>
-            <Route path="/movies/:filmId/rewies">
-                <Rewies id={filmId}/>
-            </Route>
+            <Switch>
+                <Route path="/movies/:filmId/cast">
+                    <Cast id={filmId}/>
+                </Route>
+                <Route path="/movies/:filmId/rewies">
+                    <Rewies id={filmId}/>
+                </Route>
+            </Switch>
+            
             
             
 

@@ -1,20 +1,3 @@
-.title {
-  color: aliceblue;
-  text-transform: uppercase;
-  font-size: 30px;
-  margin-bottom: 20px;
-  background-color: darkblue;
-  width: 400px;
-  display: flex;
-  justify-content: center;
-  border-radius: 20px;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-}
-
 .list {
   list-style: none;
   margin: 0;
@@ -35,6 +18,26 @@
   margin-top: 20px;
   position: relative;
   border-radius: 5px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 250px;
+  height: 375px;
+  border-radius: 5px;
+  display: block;
+}
+
+.filmTitle {
+  color: aliceblue;
+  font-size: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .listItem:hover {
@@ -69,25 +72,4 @@
 
 .vote {
   display: none;
-}
-
-.Link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.img {
-  width: 250px;
-  height: 375px;
-  border-radius: 5px;
-  display: block;
-}
-
-.filmTitle {
-  color: aliceblue;
-  font-size: 18px;
-  padding-top: 15px;
-  padding-bottom: 15px;
 }

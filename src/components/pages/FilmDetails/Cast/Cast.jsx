@@ -1,15 +1,20 @@
 import { useState, useEffect } from 'react';
 import { CastActors } from '../../../../Api/Api';
 import s from './Cast.module.css';
+import { useLocation } from 'react-router-dom';
+
 
 const Cast = ({ id }) => {
     const [actors, setActors] = useState([]);
+    const location = useLocation();
+
+    
 
     useEffect(() => {
         CastActors(id).then(res => (res.cast)).then(res => (setActors(res)));;
     }, [])
 
-    // console.log(actors);
+    
 
     return (
         <div className={s.wraper}>
