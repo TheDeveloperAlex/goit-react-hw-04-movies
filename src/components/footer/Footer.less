@@ -1,0 +1,74 @@
+@import "../../variables.less";
+@import "../../breakpoints.less";
+
+.footer {
+  background-color: @primary-bg-color;
+
+  .logo {
+    color: #fff;
+  }
+
+  .divider {
+    margin: 32px 0;
+    background-color: #d9d9d9;
+  }
+
+  h5,
+  span:not([role="img"]) {
+    color: #fff;
+  }
+
+  @media screen and (min-width: @breakpoint-sm) {
+    .divider {
+      margin: 24px 0;
+    }
+  }
+}
+
+.links-list {
+  display: flex;
+  gap: 8px;
+}
+
+.links-list-socials {
+  span[role="img"],
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.links-list-help {
+  flex-wrap: wrap;
+}
+
+.footer-top-part,
+.footer-bottom-part {
+  display: grid;
+  gap: 24px;
+}
+
+@media screen and (min-width: @breakpoint-sm) and (max-width: @breakpoint-md) {
+  .footer-top-part {
+    grid-template-columns: 1fr auto;
+    > div:last-child {
+      grid-column-start: 2;
+    }
+  }
+  .footer-bottom-part {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+@media screen and (min-width: @breakpoint-md) {
+  .footer-top-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .footer-bottom-part {
+    display: flex;
+    justify-content: space-between;
+  }
+}
