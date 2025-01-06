@@ -1,0 +1,23 @@
+@import "../breakpoints.less";
+
+.trends {
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  .trends-list {
+    margin-bottom: 24px;
+  }
+}
+
+.trends-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+@media screen and (min-width: @breakpoint-xl) {
+  .trends-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}

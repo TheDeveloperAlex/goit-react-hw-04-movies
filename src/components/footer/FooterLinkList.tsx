@@ -24,9 +24,9 @@ export const FooterLinkList: FC<FooterLinkListProps> = ({
     <ul className={className ? `links-list ${className}` : "links-list"}>
       {links.map((link) => {
         return isNavLinks ? (
-          <NavLink {...link} />
+          <NavLink key={link.to} {...link} />
         ) : (
-          <Link rel="noopener noreferrer" {...link} />
+          <Link key={link.to} rel="noopener noreferrer" {...link} />
         );
       })}
     </ul>
